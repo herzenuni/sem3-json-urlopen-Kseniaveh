@@ -8,7 +8,7 @@ def InputVkIds():
   return id
 
 def SendRequestVk(ids):
-  request = "https://api.vk.com/method/users.get?user_ids={id}&fields=sex,city,first_name,last_name,online,last_seen&v=5.69".format(id = ids)
+  request = "https://api.vk.com/method/users.get?user_ids={id}&fields=sex,first_name,last_name,online,last_seen&v=5.69".format(id = ids)
   print('Сформированный запрос:', request)
   obj={}
   try:
