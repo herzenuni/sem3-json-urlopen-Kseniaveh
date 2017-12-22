@@ -14,7 +14,7 @@ def SendRequestVk(ids):
   try:
 	  request_obj = urlopen(request)#отправка на сервер
 	  obj = json.loads(request_obj.read())#конвертируем ответ сервера в JSON
-  except:
+  except ConnectionError:
 	  obj={"response":"error","message":"Ошибка соединения с сервером!, Проверьте соединение!"}#имитируем JSON при ошибке сервера, для того чтобы функция не возращала пустых значений
   return obj
 
